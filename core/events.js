@@ -1,5 +1,5 @@
-// EventBus - The nervous system of our platform
-// Why: Features communicate through events, not direct calls
+// EventBus
+// Features communicate through events, not direct calls
 class EventBus {
   constructor() {
     this.listeners = {};

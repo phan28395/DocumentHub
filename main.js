@@ -6,11 +6,11 @@ async function init() {
   console.log('Document Intelligence Platform initializing...');
   
   // Set up notification handler
-  coreAPI.events.on('ui:notification', ({ message, type }) => {
+  coreAPI.events.on('ui:notification', ({ message, type }) => { //Subscriber
     showNotification(message, type);
   });
   
-  // For testing - expose API globally in development
+  // For testing - expose API globally in development (window global provided by browser)
   if (window.location.hostname === 'localhost') {
     window.coreAPI = coreAPI;
   }

@@ -1,5 +1,9 @@
-// CoreAPI - The contract that features rely on
+// CoreAPI
 // Makes the app "extension ready"
+// Provide upload, get docu text, set docu text, get metadata, access current document
+// Provide ui management
+// Provide settings management
+// Provide storage and events access
 import { eventBus } from './events.js';
 import { storage } from './storage.js';
 
@@ -10,8 +14,8 @@ class CoreAPI {
       current: null,  // Will hold current document data
       
       // Upload a new document
-      upload: async (file) => {
-        // For now, just emit event - features will handle123
+      upload: async (file) => { //Publisher
+        // For now, just emit event, features will handle
         
         eventBus.emit('document:upload:requested', { file });
         return { id: Date.now(), file };

@@ -6,4 +6,3 @@ graph TD
     E --> F[6. Extract Common Patterns]
     F --> G[7. Refactor Core]
     G --> H[8. Open to Community]
-
